@@ -1,4 +1,6 @@
-# kommerce
+# Laravel Showcase
+
+This is a simple Laravel 8 showcase.
 
 ## Class Design
 
