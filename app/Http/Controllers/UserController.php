@@ -17,7 +17,8 @@ class UserController extends Controller
         return view('users_create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $user = new User([
             'name' => $request->name,
             'email' => $request->email,
@@ -26,6 +27,24 @@ class UserController extends Controller
             ]);
 
         $user->save();
+        return redirect('users');
+    }
+
+    public function edit(User $user)
+    {
+        return view('users_edit', ['user' => $user]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $userDb = User::query()->where(['id' => $id]);
+
+        $userDb->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password,
+        ]);
+
         return redirect('users');
     }
 }

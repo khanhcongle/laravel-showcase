@@ -28,6 +28,6 @@ Route::prefix('users/')->group(function () {
 
     Route::get('edit/{user}', [UserController::class, 'edit']);
 
-    Route::put('{user}', [UserController::class, 'update']);
+    Route::put('{id}', [UserController::class, 'update']);
 });
 

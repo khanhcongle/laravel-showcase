@@ -13,11 +13,13 @@
 
 @section('content')
     <div class="row">
-        <form action="/users" method="post">
+        <form action="/users/{{$user->id}}" method="POST">
             @csrf
-            <input type="text" name="name">
-            <input type="text" name="email">
-            <input type="password" name="password">
+            @method('PUT')
+
+            <input type="text" name="name" value="{{$user->name}}"/>
+            <input type="text" name="email" value="{{$user->email}}">
+            <input type="password" name="password" value="{{$user->password}}">
 
             <input type="submit" value="Submit">
         </form>
