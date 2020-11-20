@@ -15,6 +15,8 @@ docker-compose down
 ## init model and controllers
 
 docker-compose exec app php artisan make:controller IndexController
+docker-compose exec app php artisan make:controller UserController
+
 
 docker-compose exec app php artisan make:model Category --migration
 docker-compose exec app php artisan make:model Tag --migration
