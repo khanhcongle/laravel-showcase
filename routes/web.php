@@ -18,16 +18,16 @@ Route::get('/', IndexController::class);
 
 Route::prefix('users/')->group(function () {
 
-    Route::get('', [UserController::class, 'index']);
+    Route::get('', [UserController::class, 'index'])->name('users.index');
 
-    Route::get('create', [UserController::class, 'create']);
+    Route::get('create', [UserController::class, 'create'])->name("users.create");
 
-    Route::post('', [UserController::class, 'store']);
+    Route::post('', [UserController::class, 'store'])->name('users.store');
 
-    Route::get('show/{user}', [UserController::class, 'show']);
+    Route::get('show/{user}', [UserController::class, 'show'])->name("users.show");
 
-    Route::get('edit/{user}', [UserController::class, 'edit']);
+    Route::get('edit/{user}', [UserController::class, 'edit'])->name('users.edit');
 
-    Route::put('{id}', [UserController::class, 'update']);
+    Route::put('{id}', [UserController::class, 'update'])->name('users.update');
 });
 

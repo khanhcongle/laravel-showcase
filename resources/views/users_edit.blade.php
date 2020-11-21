@@ -17,11 +17,29 @@
             @csrf
             @method('PUT')
 
-            <input type="text" name="name" value="{{$user->name}}"/>
-            <input type="text" name="email" value="{{$user->email}}">
-            <input type="password" name="password" value="{{$user->password}}">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nameInput">User name</label>
+                    <input id="nameInput" type="text" class="form-control" name="name" value="{{$user->name}}"/>
+                </div>
+            </div>
 
-            <input type="submit" value="Submit">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="emailInput">Email address</label>
+                    <input id="emailInput" type="email" class="form-control" name="email" value="{{$user->email}}"/>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="passwordInput">Password</label>
+                    <input id="passwordInput" type="password" class="form-control" name="password" value="{{$user->password}}"/>
+                </div>
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Submit">
+
         </form>
     </div>
 @endsection

@@ -11,7 +11,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{asset('vendor/css/mystyle.css')}}" rel="stylesheet">
+{{--    <link href="{{asset('vendor/css/mystyle.css')}}" rel="stylesheet">--}}
 </head>
 
 <body>
@@ -27,6 +27,7 @@
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
@@ -46,9 +47,7 @@
 
 <!-- Page Content -->
 <div class="container">
-
     @yield('content')
-
 </div>
 <!-- /.container -->
 
