@@ -42,13 +42,10 @@ docker-compose exec app php artisan make:model Post --migration
 
 ### 3rd parties integration
 
-#### Caching with Redis
-https://blog.igorclauss.de/post/a-simple-in-memory-caching-system-for-blog-posts-with-redis
+- Caching with Redis: https://blog.igorclauss.de/post/a-simple-in-memory-caching-system-for-blog-posts-with-redis
 
 ### Courses
 
-#### PHP fundamentals
-https://code.tutsplus.com/courses/php-fundamentals
+- PHP fundamentals: https://code.tutsplus.com/courses/php-fundamentals
 
-#### Build a CMS with Laravel
-https://code.tutsplus.com/courses/build-a-cms-with-laravel
+- Build a CMS with Laravel: https://code.tutsplus.com/courses/build-a-cms-with-laravel

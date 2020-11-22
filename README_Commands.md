@@ -37,6 +37,9 @@ docker-compose exec app php artisan migrate
 
 docker-compose run --rm npm install
 
+// Run this command, components files will be available under the folder resources/views/vendor/jetstream/components
+docker-compose exec app php artisan vendor:publish --tag=jetstream-views
+
 docker-compose run --rm npm run dev
 
 ## install admin page
