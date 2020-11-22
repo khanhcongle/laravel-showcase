@@ -28,19 +28,17 @@ docker-compose exec app php artisan make:model Post --migration
 
 ### Project 
 
-#### Project Kick starter 
-https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose
+- Project Kick starter: https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose
 
-#### Adapt with Laravel 8
-https://dev.to/tomtomdu73/setup-docker-compose-to-run-laravel-8-on-lemp-stack-for-local-development-3gh4
+- Adapt with Laravel 8: https://dev.to/tomtomdu73/setup-docker-compose-to-run-laravel-8-on-lemp-stack-for-local-development-3gh4
+
+- Setup docker: https://dev.to/aschmelyun/crafting-a-better-local-laravel-dev-environment-with-docker-45cj
 
 ### Coding practices
 
-#### Laravel naming convention
-https://webdevetc.com/blog/laravel-naming-conventions
+- Laravel naming convention: https://webdevetc.com/blog/laravel-naming-conventions
 
-#### Laravel best practices
-https://github.com/alexeymezenin/laravel-best-practices
+- Laravel best practices: https://github.com/alexeymezenin/laravel-best-practices
 
 ### 3rd parties integration
 

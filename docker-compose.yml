@@ -20,6 +20,27 @@ services:
     networks:
       - app-network
 
+  composer:
+    image: composer:latest
+    container_name: composer
+    volumes:
+      - ./:/var/www
+    working_dir: /var/www
+    depends_on:
+      - app
+    networks:
+      - app-network
+
+  npm:
+    image: node:latest
+    container_name: npm
+    volumes:
+      - ./:/var/www
+    working_dir: /var/www
+    entrypoint: ['npm', '--no-bin-links']
+    networks:
+      - app-network
+
   #Nginx Service
   webserver:
     image: nginx:alpine
