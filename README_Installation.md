@@ -1,0 +1,34 @@
+## Plugins for Visual Studio Code
+
+code --install-extension aliariff.auto-add-brackets
+code --install-extension amiralizadeh9480.laravel-extra-intellisense
+code --install-extension apollographql.vscode-apollo
+code --install-extension austenc.laravel-blade-spacer
+code --install-extension bradlc.vscode-tailwindcss
+code --install-extension Chad.solarized-light-operator-theme
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension christian-kohler.path-intellisense
+code --install-extension codingyu.laravel-goto-view
+code --install-extension CoenraadS.bracket-pair-colorizer
+code --install-extension dacoto.laravel-easy-blade-snippets
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension Equinusocio.vsc-material-theme
+code --install-extension equinusocio.vsc-material-theme-icons
+code --install-extension felixfbecker.php-intellisense
+code --install-extension formulahendry.auto-close-tag
+code --install-extension hollowtree.vue-snippets
+code --install-extension kokororin.vscode-phpfmt
+code --install-extension KTamas.laravel-blade
+code --install-extension leizongmin.node-module-intellisense
+code --install-extension marabesi.php-import-checker
+code --install-extension MehediDracula.php-namespace-resolver
+code --install-extension neilbrayfield.php-docblocker
+code --install-extension octref.vetur
+code --install-extension onecentlin.laravel-blade
+code --install-extension phproberto.vscode-php-getters-setters
+code --install-extension PKief.material-icon-theme
+code --install-extension ryannaddy.laravel-artisan
+code --install-extension steoates.autoimport
+code --install-extension vincaslt.highlight-matching-tag
+code --install-extension wix.vscode-import-cost
+code --install-extension xabikos.JavaScriptSnippets
