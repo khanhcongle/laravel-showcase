@@ -14,7 +14,7 @@ use \App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', IndexController::class);
+/* without Authentication */
 
 Route::prefix('users/')->group(function () {
 
@@ -32,6 +32,8 @@ Route::prefix('users/')->group(function () {
 });
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+/* with Authentication (Sanctum Authentication) */
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
