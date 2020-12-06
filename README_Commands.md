@@ -22,6 +22,7 @@ docker-compose exec app php artisan make:model Tag --migration
 docker-compose exec app php artisan make:model Post --migration
 
 docker-compose exec app php artisan make:migration create_post_tag_table
+docker-compose exec app php artisan make:migration AddForeignKeysToPostsTable
 
 docker-compose exec app php artisan migrate
 ```
@@ -66,6 +67,20 @@ docker-compose exec app php artisan migrate:reset
 docker-compose exec app php artisan voyager:install --with-dummy
 ```
 
+
+## Seed data or testing
+```shell
+# Create a model factory using Faker
+docker-compose exec app php artisan make:factory PostFactory
+
+# Seed objects to our database
+docker-compose exec app php artisan db:seed
+
+# Migration down everything, and then migration up again
+docker-compose exec app php artisan migrate:fresh
+docker-compose exec app php artisan migrate:fresh --seed
+```
+
 ## Utils
 
 ```shell
@@ -78,10 +93,5 @@ docker-compose exec app php artisan config:cache
 # Update dependencies (configuration file: composer.json) 
 docker-compose run --rm composer update
 
-# Seed objects to our database
-docker-compose exec app php artisan db:seed
-
-# Migration down everything, and then migration up again
-docker-compose exec app php artisan migration:refresh
-docker-compose exec app php artisan migration:refresh --seed
 ```
+
