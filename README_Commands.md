@@ -93,5 +93,7 @@ docker-compose exec app php artisan config:cache
 # Update dependencies (configuration file: composer.json) 
 docker-compose run --rm composer update
 
+# Open command prompt
+docker-compose exec app php artisan tinker
 ```
 

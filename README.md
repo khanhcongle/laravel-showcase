@@ -40,6 +40,8 @@ docker-compose exec app php artisan make:model Post --migration
 
 - Laravel best practices: https://github.com/alexeymezenin/laravel-best-practices
 
+- PHP Lighthouse performance: https://lighthouse-php.com/4.0/performance/n-plus-one.html#eager-loading-relationships
+
 ### 3rd parties integration
 
 - Caching with Redis: https://blog.igorclauss.de/post/a-simple-in-memory-caching-system-for-blog-posts-with-redis
