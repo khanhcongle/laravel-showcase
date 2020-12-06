@@ -57,7 +57,11 @@ docker-compose exec app php artisan vendor:publish --tag=lighthouse-schema
 
 docker-compose run --rm composer require mll-lab/laravel-graphql-playground
 
-# Ref: https://lighthouse-php.com/4.18/getting-started/installation.html
+# Console here:
+# http://localhost/graphql-playground
+
+# Doc: 
+# https://lighthouse-php.com/4.18/getting-started/installation.html
 ```
 
 ## Install `tcg/voyager` as free admin page
@@ -79,6 +83,21 @@ docker-compose exec app php artisan db:seed
 # Migration down everything, and then migration up again
 docker-compose exec app php artisan migrate:fresh
 docker-compose exec app php artisan migrate:fresh --seed
+```
+
+## Install laravel/telescope for debug assistance
+```shell
+docker-compose run composer require laravel/telescope
+
+docker-compose exec app php artisan telescope:install
+docker-compose exec app php artisan migrate
+
+# Console here:
+# http://localhost/telescope
+
+# Doc: 
+# https://laravel.com/docs/8.x/telescope
+
 ```
 
 ## Utils
