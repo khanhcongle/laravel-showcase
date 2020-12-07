@@ -27,7 +27,7 @@ class PostFactory extends Factory
             Post::$CONTENT => $this->faker->paragraph(10, true),
             Post::$IS_FEATURED => false,
             Post::$IS_PUBLISHED => $this->faker->boolean,
-            Post::$TITLE => $this->faker->text,
+            Post::$TITLE => $this->faker->text(40),
             Post::$USER_ID => random_int(1, 20),
         ];
     }

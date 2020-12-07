@@ -31,9 +31,13 @@ Route::prefix('users/')->group(function () {
     Route::put('{id}', [UserController::class, 'update'])->name('users.update');
 });
 
+Route::get('', function () {
+   return \Inertia\Inertia::render('PostList');
+});
+
 
 /* with Authentication (Sanctum Authentication) */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');

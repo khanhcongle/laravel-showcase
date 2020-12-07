@@ -13,6 +13,9 @@ import Vue from 'vue';
 import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
+import ApolloClient from 'apollo-boost';
+import VueApollo from 'vue-apollo';
+
 
 Vue.mixin({ methods: { route } });
 
@@ -20,6 +23,15 @@ Vue.mixin({ methods: { route } });
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);
+Vue.use(VueApollo);
+
+const apolloClient = new ApolloClient({
+    uri: 'http://localhost/graphql'
+});
+
+const apolloProvider = new VueApollo({
+    defaultClient: apolloClient
+});
 
 const app = document.getElementById('app');
 
@@ -31,4 +43,5 @@ new Vue({
                 resolveComponent: (name) => require(`./Pages/${name}`).default,
             },
         }),
+    apolloProvider
 }).$mount(app);

@@ -27,8 +27,13 @@ docker-compose exec app php artisan make:migration AddForeignKeysToPostsTable
 docker-compose exec app php artisan migrate
 ```
 
-## Install `laravel/jetstream` for UI and Security
+## Install `laravel/jetstream` for UI (laravel/inertia) and Security
 ```shell
+# Inertia has no client-side routing, nor does it require an API. 
+# Simply build controllers and page views like you've always done!
+# https://inertiajs.com/
+# https://jetstream.laravel.com/1.x/stacks/inertia.html#introduction
+
 docker run --rm -v ${PWD}:/app composer require laravel/jetstream
 
 # Install Jetstream with the Inertia stack...
@@ -36,13 +41,18 @@ docker-compose exec app php artisan jetstream:install inertia
 docker-compose exec app php artisan migrate
 docker-compose run --rm npm install
 
-# Components files will be available under the folder resources/views/vendor/jetstream/components
+# Components files will be available under the folder 
+# ./resources/views/vendor/jetstream/components
 docker-compose exec app php artisan vendor:publish --tag=jetstream-views
 
-# Run in development mode (config file: package.json)
+# Run either in "development" mode (config file: package.json)
+# or in "watch" mode the page refresh as soon as you hit save file 
 docker-compose run --rm npm run dev
-# In "watch" mode the page refresh as soon as you hit save file 
 docker-compose run --rm npm run watch
+
+# Update Vue pages under folder
+# ./resources/js/Pages/
+
 ```
 
 ## Install `barryvdh/laravel-ide-helper` for Visual Studio Code
@@ -98,6 +108,11 @@ docker-compose exec app php artisan migrate
 # Doc: 
 # https://laravel.com/docs/8.x/telescope
 
+```
+
+## Install Vue/Apollo as GraphQl client
+```shell
+docker-compose run --rm npm install vue-apollo graphql apollo-boost graphql-tag
 ```
 
 ## Utils
