@@ -1,6 +1,12 @@
-require('./bootstrap');
+// load other libraries
+import './bootstrap';
 
-require('moment');
+// MomentJs making date and time better on the web
+import 'moment';
+
+// import section,
+// `require` load the whole bundle of a library
+// `import` only load things that are necessary for our application
 
 import Vue from 'vue';
 
@@ -9,6 +15,8 @@ import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
 
 Vue.mixin({ methods: { route } });
+
+// additional Vue plugins
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);
 Vue.use(PortalVue);

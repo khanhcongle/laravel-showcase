@@ -87,7 +87,7 @@ docker-compose exec app php artisan migrate:fresh --seed
 
 ## Install laravel/telescope for debug assistance
 ```shell
-docker-compose run composer require laravel/telescope
+docker-compose run --rm composer require laravel/telescope
 
 docker-compose exec app php artisan telescope:install
 docker-compose exec app php artisan migrate
