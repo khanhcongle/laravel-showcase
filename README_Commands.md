@@ -1,4 +1,17 @@
-# Windows (MS Powershell)
+# To run this project
+```sh
+docker-compose run --rm composer install
+docker-compose run --rm composer update
+docker-compose run --rm npm install
+
+docker-compose up -d
+docker-compose exec app php artisan key:generate
+docker-compose exec app php artisan migrate:fresh --seed
+
+docker-compose run --rm npm run watch
+```
+
+# History of commonly used commands (Run on Windows Powershell)
 
 ## Download Laravel dependencies 
 ```shell
