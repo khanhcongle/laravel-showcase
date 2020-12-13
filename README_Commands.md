@@ -9,6 +9,8 @@ docker-compose exec app php artisan key:generate
 docker-compose exec app php artisan migrate:fresh --seed
 
 docker-compose run --rm npm run watch
+
+// remember to clear cache on browser (Ctrl + F5)
 ```
 
 # History of commonly used commands (Run on Windows Powershell)
