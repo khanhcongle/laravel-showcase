@@ -32,3 +32,12 @@ code --install-extension steoates.autoimport
 code --install-extension vincaslt.highlight-matching-tag
 code --install-extension wix.vscode-import-cost
 code --install-extension xabikos.JavaScriptSnippets
+
+## Intellij Tailwind CSS autocomplete
+When the CSS file that Tailwind generates gets too big, PHPStorm will stop indexing it. If the file isn't indexed, autocompletion won't work for CSS classes. This problem is common when adding extra variants, or when using the @tailwindcss/ui plugin.
+
+- If your CSS classes aren't being autocompleted, try opening the CSS file that Tailwind generates in your public/css/ directory. You should see a yellow banner that says: "The file size (4.03 MB) exceeds configured limit (2.56 MB). Code insight features are not available". If you see this yellow banner, you can fix the problem by doing the following:
+    + In the main menu toolbar, click Help > Edit Custom Properties...
+    + Add the following line: idea.max.intellisense.filesize=6000
+    + Restart PHPStorm
+

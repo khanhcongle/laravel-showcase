@@ -9,14 +9,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Post extends Model
 {
-    public static string $USER_ID = 'user_id';
-    public static string $CATEGORY_ID = 'category_id';
-    public static string $TITLE = 'title';
-    public static string $SLUG = 'slug';
-    public static string $CONTENT = 'content';
-    public static string $FEATURED_IMAGE = 'featured_image';
-    public static string $IS_FEATURED = 'is_featured';
-    public static string $IS_PUBLISHED = 'is_published';
+    public const USER_ID = 'user_id';
+    public const CATEGORY_ID = 'category_id';
+    public const TITLE = 'title';
+    public const SLUG = 'slug';
+    public const CONTENT = 'content';
+    public const LEAD = 'lead';
+    public const FEATURED_IMAGE = 'featured_image';
+    public const IS_FEATURED = 'is_featured';
+    public const IS_PUBLISHED = 'is_published';
 
     use HasFactory;
 
@@ -31,6 +32,7 @@ class Post extends Model
         'title',
         'slug',
         'content',
+        'lead',
         'featured_image',
         'is_featured',
         'is_published'

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Blog\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use \App\Http\Controllers\UserController;
@@ -35,6 +36,10 @@ Route::get('', function () {
    return \Inertia\Inertia::render('PostList');
 });
 
+Route::prefix('post')->group(function () {
+    Route::get('show/{post}', [PostController::class, 'show'])
+        ->name('post.show');
+});
 
 /* with Authentication (Sanctum Authentication) */
 

@@ -8,27 +8,29 @@
                 Loading...
             </div>
             <div v-else>
-                <div v-for="post in posts" :key="post.id">
-                    {{ post.id }}: {{ post.title }}
-                </div>
+                <post-list-item v-for="post in posts" :key="post.id" :post="post"
+                                class="mt-10">
+                </post-list-item>
             </div>
         </div>
     </app-layout>
 </template>
 
 <script>
-import AppLayout from "@/Layouts/BlogShowcaseLayout";
 import gql from "graphql-tag";
+import AppLayout from "@/Layouts/BlogShowcaseLayout";
+import PostListItem from "@/Components/PostListItem";
 
 export default {
     name: "PostList",
-    components: {AppLayout},
+    components: {PostListItem, AppLayout},
     apollo: {
         posts: gql`
             query {
                 posts {
                     id
                     title
+                    lead
                 }
             }
         `

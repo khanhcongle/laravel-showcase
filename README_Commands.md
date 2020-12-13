@@ -38,6 +38,7 @@ docker-compose exec app php artisan make:model Post --migration
 
 docker-compose exec app php artisan make:migration create_post_tag_table
 docker-compose exec app php artisan make:migration AddForeignKeysToPostsTable
+docker-compose exec app php artisan make:migration AddLeadToPostsTable
 
 docker-compose exec app php artisan migrate
 ```
