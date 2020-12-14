@@ -131,6 +131,11 @@ docker-compose exec app php artisan migrate
 docker-compose run --rm npm install vue-apollo graphql apollo-boost graphql-tag
 ```
 
+## Run storage:link to use images on the frontend
+```shell
+docker-compose exec app php artisan storage:link
+```
+
 ## Utils
 
 ```shell
